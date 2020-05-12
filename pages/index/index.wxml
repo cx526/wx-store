@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view>
+<!-- 轮播图 -->
+  <view class="swiper-box">
+		  <swiper autoplay indicator-dots indicator-color="rgba(187,187,187,0.4)" indicator-active-color="rgba(255,255,255,0.7)">
+        <block wx:for="{{imgUrl}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item.adv_image}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+	</view>
+<!-- banner图 -->
+  <view class="banner">
+    <image src="/images/dianxia.png"></image>
+  </view>
+<!-- 精品推荐 -->
+  <view class="title-box" >
+		<view class="title">
+			<view class="main">
+				<text>精品推荐</text>
+			</view>
+			<view class="context">
+				<text bindtap="checkMore">查看更多</text>
+				<image src="https://www.dxsc.vip/images/icon-right.png" mode=""></image>
+			</view>
+		</view>
+	</view>
+<!-- 产品列表 -->
+  <view>
+		<view class="news-box ">
+				<view style="box-sizing: border-box;padding: 0 20rpx;" class="news">
+					<block wx:for="{{newsList}}" wx:key="index">
+						<!-- 跳转到goods-detail页面 -->
+						<view class="news-item" bindtap="goDetail" data-id="{{ item.goods_id }}">
+							<image src="{{item.pic_cover_small}}" class="image"></image>
+							<view class="news-text">
+								<view class="news-title">
+									<text>{{item.goods_name}}</text>
+								</view>
+								<view class="news-price">
+										<view class="now"><text>￥{{item.price}}</text></view>
+										<view class="old"><text>￥{{item.market_price}}</text></view>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+		</view>
+		
+	</view>
+</view>

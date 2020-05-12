@@ -1,0 +1,96 @@
+.swiper-box {
+  box-sizing: border-box;
+  padding: 20rpx;
+  height: 600rpx;
+}
+
+.swiper-box swiper {
+  height: 100%;
+}
+
+.swiper-box image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 列表 */
+
+.list-box {
+  box-sizing: border-box;
+}
+
+.list-item {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+}
+
+.list-item text:nth-child(1) {
+  flex-shrink: 0;
+}
+
+.list-item text:nth-child(2) {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 推荐列表 */
+
+.recommend-box {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.recommend-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  line-height: 80rpx;
+}
+
+.recommend-title text {
+  border-bottom: 3px solid rgb(254, 217, 64);
+  padding-bottom: 10rpx;
+}
+
+.recommend-product {
+  box-sizing: border-box;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  width: 49.5%;
+  box-sizing: border-box;
+}
+
+.product-item image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.product-item text {
+  display: inline-block;
+  margin: 10rpx 0;
+}
+
+.product-item .new {
+  color: rgb(195, 0, 11);
+  font-size: 26rpx;
+  margin-right: 10rpx;
+}
+
+.product-item .old {
+  color: rgb(170, 170, 170);
+  font-size: 24rpx;
+  text-decoration: line-through;
+}

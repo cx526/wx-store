@@ -1,0 +1,45 @@
+<view>
+  <!-- 轮播图 -->
+  <view class="swiper-box">
+    <swiper autoplay indicator-dots indicator-color="rgba(187,187,187,0.4)" indicator-active-color="rgba(255,255,255,0.7)">
+      <block wx:for="{{imgUrl}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 列表 -->
+  <view class="list-box">
+    <view class="list-item">
+      <text>店名：</text>
+      <text  wx:if="{{ shop_info.shop_name }}">{{ shop_info.shop_name }}</text>
+      <text wx:else>暂无资料</text>
+    </view>
+     <view class="list-item">
+      <text>预约电话：</text>
+      <text wx:if="{{ shop_info.shop_phone }}" bindtap="makePhone">{{ shop_info.shop_phone }}</text>
+      <text wx:else>暂无资料</text>
+    </view>
+    <view class="list-item">
+      <text>店铺地址：</text>
+      <text wx:if="{{ shop_info.live_store_address }}" bindtap="openMap">{{ shop_info.live_store_address }}</text>
+      <text wx:else>暂无地址详情信息</text>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view class="recommend-box">
+    <view class="recommend-title">
+      <text>为您推荐</text>
+    </view>
+    <view class="recommend-product">
+      <view class="product">
+        <view class="product-item" wx:for="{{ goodsList }}" wx:key="index" bindtap="goDetail" data-index="{{ index }}">
+          <image src="{{ item.img }}"></image>
+          <text class="new">￥{{ item.price }}</text>
+          <text class="old">￥{{ item.market_price }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

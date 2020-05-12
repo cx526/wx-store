@@ -1,0 +1,35 @@
+<view>
+  <view class="location">
+    <view class="location-left">
+    <image src="https://www.dxsc.vip/images/location.png"></image>
+      <text>当前所处位置</text>
+    </view>
+    <view class="location-right" bindtap="getLocation">
+      <text>{{ cityName }}</text>
+    </view>
+  </view>
+ 
+  <view class="product-box" wx:if="{{ shopList }} && {{ shopList.length > 0 }}">
+    <view class="product">
+      <view class="product-item" wx:for="{{shopList}}" wx:key="index" bindtap="goDetail" data-id="{{ item.goods_id }}">
+        <view class="product-show">
+          <image src="{{ item.picture_cover }}"></image>
+        </view>
+        <view class="product-address">
+          <text class="main">{{ item.live_store_address }}</text>
+          <text class="distance">{{ item.distance_number }}</text>
+        </view>
+        <view class="product-title">
+          <text class="title">{{ item.goods_name }}</text>
+          <text class="sales">销售量：{{ item.sales }}</text>
+        </view>
+        <view class="product-price">
+          <text class="new">￥{{ item.price }}</text>
+          <text class="old">￥{{item.market_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{ shopList == '' }}" class="none">所在区域附件暂无爆品!</view>
+  <view wx:if="{{ flag && shopList != '' }}" class="none">暂无更多数据</view>
+</view>

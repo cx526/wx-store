@@ -1,0 +1,44 @@
+<view>
+  <!-- 横向滚动条 -->
+  <view class="scroll-x">
+    <scroll-view scroll-x scroll-into-view="{{ id }}">
+      <view wx:for="{{ list }}" wx:key="index" bindtap="changeNav" data-index="{{ index }}" id="{{ item.id }}">
+        <text class="{{ currentIndex == index? 'active': '' }}">{{ item.short_name }}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- banner图 -->
+  <view class="banner">
+    <image src="https://www.dxsc.vip/images/online-goods.png"></image>
+  </view>
+  <!-- 为您推荐 -->
+  <view class="recommond">
+    <text>为您推荐</text>
+  </view>
+  <!-- 推荐产品 -->
+  <view class="product-box" wx:if="{{ goodsList && goodsList.length > 0 }}">
+    <view class="product">
+      <view class="product-item"  wx:for="{{ goodsList }}" wx:key="index" bindtap="goDetail" data-index="{{ item.goods_id }}">
+        <image src="{{ item.pic_cover_mid }}"></image>
+        <view class="product-title">
+          <text>{{ item.goods_name }}</text>
+        </view>
+        <view class="product-price">
+          <view class="new">
+            <text>￥{{ item.price }}</text>
+            <text class="member">会员专享价</text>
+          </view>
+          <view class="old">
+            <text>市场参考价：</text>
+            <text>￥{{ item.market_price }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="none" wx:if="{{ goodsList.length == 0 && flag }}">
+  </view>
+  <view class="none" wx:if="{{ goodsList && goodsList.length > 0 && loadingMore }}">
+    <text >暂无更多数据</text>
+  </view>
+</view>

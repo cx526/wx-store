@@ -1,0 +1,57 @@
+.logo {
+  width: 220rpx;
+  height: 170rpx;
+  margin: 0 auto;
+  padding-top: 80rpx;
+  justify-content: space-between;
+  flex: 1;
+}
+.logo image {
+  width: 100%;
+  height: 100%;
+}
+.form-box {
+  box-sizing: border-box;
+  padding:  0 10%;
+}
+.form {
+  box-sizing: border-box;
+  margin-top: 50rpx
+}
+.form-item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.form-item image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.form-item input {
+  flex: 1;
+  border-bottom: 1px solid #f1f1f1;
+  box-sizing: border-box;
+  height: 80rpx
+}
+.form-text {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #666;
+  text-align: right;
+  margin-bottom: 20rpx;
+}
+
+.btn-box {
+  position: absolute;
+  bottom: 160rpx;
+  box-sizing: border-box;
+  padding: 0 20%;
+  width: 100%;
+}
+.btn-box button {
+  width: 100%;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+}

@@ -1,0 +1,17 @@
+<view class="noLogin">
+  <view class="logo">
+    <image src="https://www.dxsc.vip/images/user-logo.png" mode=""></image>
+  </view>
+  <view class="des">
+    <view>
+      <text>新零售双线平台,</text>
+    </view>
+    <view>
+      <text>强力打通线上线下,更快,更省。</text>
+    </view>
+  </view>
+  <view class="btn">
+    <button class="login" type="primary" bindtap="goLogin">登录</button>
+    <button class="register" bindtap="goRegister" type="warn">注册</button>
+  </view>
+</view>

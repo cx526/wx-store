@@ -1,0 +1,24 @@
+<view>
+  <view class="logo">
+    <image src="https://www.dxsc.vip/images/user-logo.png" mode=""></image>
+  </view>
+  <view class="form-box">
+    <view class="form">
+      <view class="form-item">
+        <image src="https://www.dxsc.vip/images/arrow-phone.png" />
+        <input type="number" placeholder="请输入手机号码"></input>
+      </view>
+      
+      <view class="form-code">
+        <input type="number" maxlength="6"></input>
+        <view class="btn">
+          <button>获取验证码</button>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view class="btn-box">
+    <button type="warn">下一步</button>
+  </view>
+</view>

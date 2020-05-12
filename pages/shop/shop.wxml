@@ -1,0 +1,37 @@
+<view>
+  <view class="title">
+    <text>附近店家</text>
+  </view>
+  <view class="product-box" wx:if="{{ shopList && shopList.length > 0 }}">
+    <view class="product">
+      <view class="product-item" bindtap="goShopDetail" wx:for="{{ shopList }}" wx:key="index" data-index="{{ index }}">
+        <view class="product-show">
+          <image src="{{ item.shop_logo }}" wx:if="{{item.shop_logo != 'https://admin.dxsc.vip/'}}"></image>
+          <image src="/images/none-logo.jpg" wx:else></image>
+        </view>
+        <view class="product-context">
+          <view class="product-title">
+            <text>{{ item.shop_name }}</text>
+          </view>
+          <view class="product-rate">
+            <view class="product-start">
+              <image src="/images/start-active.png" wx:for="{{ item.all }}" wx:key="index"></image>
+              <image src="/images/start-half.png" wx:for="{{ item.half }}"  wx:key="index"></image>
+              <image src="/images/start.png" wx:for="{{ item.none }}"  wx:key="index"></image>
+              <text class="product-score">{{ item.shop_deliverycredit }}分</text>
+            </view>
+            <view class="product-distance" wx:if="{{ item.distance_number }}">
+              <text>{{ item.distance_number }}</text>
+            </view>
+          </view>
+          <view class="product-address">
+            <text wx:if="{{ item.live_store_address }}">{{ item.live_store_address }}</text>
+            <text wx:else>暂无地址详情</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="none" class="none" wx:if="{{ shopList == '' }}">所在区域附近暂无商家</view>
+  <view class="none" wx:if="{{ shopList && flag }}">暂无更多数据</view>
+</view>

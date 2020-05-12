@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/shop/shop",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/forget/forget",
+    "pages/goods-detail/goods-detail",
+    "pages/shop-detail/shop-detail",
+    "pages/online-goods/online-goods"
+  ],
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#FED940",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "线上好货",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "店下爆品",
+        "iconPath": "/images/goods.png",
+        "selectedIconPath": "/images/goods-active.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商铺街",
+        "iconPath": "/images/shop.png",
+        "selectedIconPath": "/images/shop-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user-active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "店下商城",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取周边商店"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

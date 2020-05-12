@@ -1,0 +1,27 @@
+<view>
+  <view class="logo">
+    <image src="https://www.dxsc.vip/images/user-logo.png" mode=""></image>
+  </view>
+  <view class="form-box">
+    <view class="form">
+      <view class="form-item">
+        <image src="https://www.dxsc.vip/images/arrow-phone.png" />
+        <input type="number" placeholder="请填写手机号码" bindinput="getUserName" maxlength="11"></input>
+      </view>
+      <view class="form-item">
+        <image src="https://www.dxsc.vip/images/arrow-password.png" />
+        <input type="password" placeholder="请输入密码" bindinput="getPassword"></input>
+      </view>
+      <view class="form-text" bindtap="goRegister">
+        <text>还没账号？前往注册</text>
+      </view>
+      <!-- <view class="form-text" bindtap="goForget">
+        <text>忘记密码？</text>
+      </view> -->
+    
+    </view>
+  </view>
+  <view class="btn-box">
+    <button type="primary" bindtap="login">立即登录</button>
+  </view>
+</view>

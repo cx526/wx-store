@@ -1,0 +1,95 @@
+/* 轮播图 */
+.swiper-box {
+  box-sizing: border-box;
+  height: 290rpx
+}
+.swiper-box image {
+  height: 100%;
+  width: 100%;
+  display: block
+}
+/* banner图 */
+.banner {
+  box-sizing: border-box;
+  padding:  16rpx
+}
+.banner image {
+  width: 100%;
+  height: 390rpx
+}
+/* 精品推荐 */
+.title-box {
+  box-sizing: border-box;
+  padding: 0 16rpx
+}
+.title-box .title {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx
+}
+.title-box .context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #999
+}
+.title-box .context image {
+  width: 30rpx;
+  height: 30rpx
+}
+/* 产品列表 */
+.news-box {
+  box-sizing: border-box;
+ 	padding-bottom: 32rpx;
+  padding-top: 20rpx
+}
+.news-box .news {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-box .news-item {
+  box-sizing: border-box;
+  width: 49%;
+  position: relative;
+}
+.news-box .news-item image {
+  width: 100%;
+  height: 300rpx;
+  display: block;
+}
+.news-box .news-text {
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  width: 100%;
+}
+.new-box .news-title {
+  font-size: 30rpx;
+  color: #444444;
+}
+.new-box .news-title text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.news-box .news-price {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center
+}
+.news-box .news-price .now {
+  font-size: 30rpx;
+  color: #FC3D3C;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.news-box .news-price .old {
+  font-size: 24rpx;
+  text-decoration: line-through;
+  color: #999
+} 

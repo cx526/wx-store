@@ -1,0 +1,37 @@
+<view>
+  <!-- 轮播图 -->
+  <view class="swiper-box">
+    <swiper autoplay indicator-dots indicator-color="rgba(187,187,187,0.4)" indicator-active-color="rgba(255,255,255,0.7)">
+      <block wx:for="{{imgUrl}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.pic_cover}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods-info">
+    <view class="goods-price">
+      <view class="goods-left">
+        <text>优惠价：￥{{ goods_info.price }}</text>
+        <text>市场价：￥{{ goods_info.market_price }}</text>
+      </view>
+      <view class="goods-right">
+        <text>库存：{{ goods_info.stock }}件</text>
+      </view>
+    </view>
+    <view class="goods-title">
+      <text>{{ goods_info.goods_name }}</text>
+      <text>{{ goods_info.introduction }}</text>
+    </view>
+  </view>
+  <view class="goods-detail">
+    <view class="title">
+      <text>商品信息</text>
+    </view>
+    <view class="rich-box">
+      <rich-text nodes="{{description}}"></rich-text>
+    </view>
+    
+  </view>
+</view>
